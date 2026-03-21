@@ -134,9 +134,8 @@ If you're a biology student interested in neuroscience, my advice: **don't narro
 The researchers who make the biggest contributions in the next 20 years will be those fluent in multiple languages of neuroscience.
     `
   }
-];
-const POSTS = [
-  
+
+
 {
   id: "organoids-stem-cell-frontier",
   title: "Organoids: How Tiny Lab-Grown Organs Are Revolutionising Stem Cell Research",
@@ -260,3 +259,4 @@ It is a reminder that the information required to build an extraordinarily compl
 As I continue my studies at IISc, organoids and the stem cell biology underlying them are an area I hope to engage with deeply — whether in the context of cancer modelling, neurodevelopmental disease, or regenerative medicine. The field is young, the questions are profound, and the tools are only getting better.
   `
 },
+];
