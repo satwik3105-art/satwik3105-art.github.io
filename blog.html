@@ -18,46 +18,110 @@
   </ul>
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
+
 <main>
   <div class="page-content">
     <h1><strong>Blog</strong></h1>
-    <div class="blog-list" id="blogList">
-      <p style="color:var(--muted)">Loading posts...</p>
+    <div class="blog-list">
+
+      <!-- ═══════════════════════════════════════════════════
+           TO ADD A NEW POST: copy one blog-item block below,
+           paste it at the top of this list, and edit the
+           date, title, excerpt, tags, and post link.
+           ═══════════════════════════════════════════════════ -->
+
+      <a href="post.html?id=organoids-stem-cell-frontier" style="text-decoration:none;color:inherit;">
+        <div class="blog-item">
+          <div class="blog-date">
+            <div class="day">21</div>Mar 2026
+          </div>
+          <div class="blog-content">
+            <h3>Organoids: How Tiny Lab-Grown Organs Are Revolutionising Stem Cell Research</h3>
+            <p>From a clump of stem cells in a dish to a miniature brain that generates its own electrical activity — organoids are changing everything we thought we knew about how to study disease.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">stem cells</span>
+              <span class="tag">organoids</span>
+              <span class="tag">cancer biology</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="post.html?id=cancer-biology-reflection" style="text-decoration:none;color:inherit;">
+        <div class="blog-item">
+          <div class="blog-date">
+            <div class="day">10</div>Jan 2025
+          </div>
+          <div class="blog-content">
+            <h3>What Drew Me to Cancer Biology — A Personal Reflection</h3>
+            <p>Tracing the curiosity that led me from a general interest in biology to a deep fascination with the molecular underpinnings of cancer.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">cancer biology</span>
+              <span class="tag">personal</span>
+              <span class="tag">research</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="post.html?id=stem-cells-explained" style="text-decoration:none;color:inherit;">
+        <div class="blog-item">
+          <div class="blog-date">
+            <div class="day">22</div>Oct 2024
+          </div>
+          <div class="blog-content">
+            <h3>Stem Cells Explained: From Basics to Breakthroughs</h3>
+            <p>An accessible introduction to stem cell biology — what they are, why they matter, and where the science is heading.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">stem cells</span>
+              <span class="tag">explainer</span>
+              <span class="tag">regenerative medicine</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="post.html?id=first-semester-iisc" style="text-decoration:none;color:inherit;">
+        <div class="blog-item">
+          <div class="blog-date">
+            <div class="day">05</div>Jul 2024
+          </div>
+          <div class="blog-content">
+            <h3>My First Semester at IISc — Lessons and Surprises</h3>
+            <p>Honest reflections on navigating one of India's most rigorous research environments as a first-year undergraduate student.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">IISc</span>
+              <span class="tag">student life</span>
+              <span class="tag">personal</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="post.html?id=interdisciplinary-neuroscience" style="text-decoration:none;color:inherit;">
+        <div class="blog-item">
+          <div class="blog-date">
+            <div class="day">18</div>Apr 2024
+          </div>
+          <div class="blog-content">
+            <h3>Why Neuroscience Needs More Interdisciplinary Researchers</h3>
+            <p>A case for bridging computational, molecular, and clinical approaches to truly understand the brain.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">neuroscience</span>
+              <span class="tag">interdisciplinary</span>
+              <span class="tag">opinion</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
 </main>
+
 <footer>
   <p>Made with ❤️ by <strong>Satwik Mahapatra</strong> · <a href="https://pages.github.com" target="_blank">GitHub Pages</a> · <a href="mailto:satwik3105@gmail.com">satwik3105@gmail.com</a></p>
 </footer>
 <script src="nav.js"></script>
-<script src="posts.js"></script>
-<script>
-  const list = document.getElementById('blogList');
-  if (!window.POSTS || POSTS.length === 0) {
-    list.innerHTML = '<p style="color:var(--muted)">No posts yet — check back soon!</p>';
-  } else {
-    list.innerHTML = POSTS.map(p => {
-      const d = new Date(p.date);
-      const day = d.getDate();
-      const mon = d.toLocaleString('en', {month:'short', year:'numeric'});
-      return `
-        <a href="post.html?id=${p.id}" style="text-decoration:none;color:inherit;">
-          <div class="blog-item">
-            <div class="blog-date">
-              <div class="day">${day}</div>
-              ${mon}
-            </div>
-            <div class="blog-content">
-              <h3>${p.title}</h3>
-              <p>${p.excerpt}</p>
-              <div class="tags" style="margin-top:8px">
-                ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-              </div>
-            </div>
-          </div>
-        </a>`;
-    }).join('');
-  }
-</script>
 </body>
 </html>
